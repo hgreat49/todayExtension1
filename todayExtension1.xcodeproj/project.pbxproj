@@ -21,6 +21,9 @@
 		6A4C7CBA20EB3D5500501F26 /* todayWidget1.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6A4C7CAD20EB3D5500501F26 /* todayWidget1.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6A9A0A8920EF0C3600847261 /* VPN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9A0A8820EF0C3600847261 /* VPN.swift */; };
 		6AF24AAF20F2DB0A00E27427 /* SystemDataUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF24AAE20F2DB0A00E27427 /* SystemDataUsage.swift */; };
+		6AF24AB120F3147300E27427 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AF24AB020F3147300E27427 /* GoogleService-Info.plist */; };
+		6AF24AB320F317F200E27427 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AF24AB220F317F200E27427 /* FirebaseCore.framework */; };
+		6AF24AB520F32B0600E27427 /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AF24AB420F32B0600E27427 /* FirebaseMessaging.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		6A4C7CC120EB5FD700501F26 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		6A9A0A8820EF0C3600847261 /* VPN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPN.swift; sourceTree = "<group>"; };
 		6AF24AAE20F2DB0A00E27427 /* SystemDataUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemDataUsage.swift; sourceTree = "<group>"; };
+		6AF24AB020F3147300E27427 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6AF24AB220F317F200E27427 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AF24AB420F32B0600E27427 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseMessaging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8500E410B402C3C8873F0159 /* Pods-todayWidget1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todayWidget1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-todayWidget1/Pods-todayWidget1.debug.xcconfig"; sourceTree = "<group>"; };
 		AE209CC3770CF281E181B42B /* Pods_todayWidget1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_todayWidget1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5EB3C027A8BFD350E3B560E /* Pods-todayExtension1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todayExtension1.release.xcconfig"; path = "Pods/Target Support Files/Pods-todayExtension1/Pods-todayExtension1.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AF24AB520F32B0600E27427 /* FirebaseMessaging.framework in Frameworks */,
+				6AF24AB320F317F200E27427 /* FirebaseCore.framework in Frameworks */,
 				6997088AA3D97CD22D6AAE99 /* Pods_todayExtension1.framework in Frameworks */,
 				6A41B24720EF2D5400089726 /* NetworkExtension.framework in Frameworks */,
 			);
@@ -130,6 +138,7 @@
 		6A4C7C9620EB3CC700501F26 /* todayExtension1 */ = {
 			isa = PBXGroup;
 			children = (
+				6AF24AB020F3147300E27427 /* GoogleService-Info.plist */,
 				6A4C7CBF20EB3D9C00501F26 /* todayExtension1.entitlements */,
 				6A9A0A8820EF0C3600847261 /* VPN.swift */,
 				6AF24AAE20F2DB0A00E27427 /* SystemDataUsage.swift */,
@@ -146,6 +155,8 @@
 		6A4C7CAE20EB3D5500501F26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6AF24AB420F32B0600E27427 /* FirebaseMessaging.framework */,
+				6AF24AB220F317F200E27427 /* FirebaseCore.framework */,
 				6A41B24620EF2D5400089726 /* NetworkExtension.framework */,
 				6A4C7CC120EB5FD700501F26 /* libsqlite3.tbd */,
 				6A4C7CAF20EB3D5500501F26 /* NotificationCenter.framework */,
@@ -267,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A4C7CA220EB3CC900501F26 /* LaunchScreen.storyboard in Resources */,
+				6AF24AB120F3147300E27427 /* GoogleService-Info.plist in Resources */,
 				6A4C7C9F20EB3CC900501F26 /* Assets.xcassets in Resources */,
 				6A4C7C9D20EB3CC700501F26 /* Main.storyboard in Resources */,
 			);
@@ -326,11 +338,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-todayExtension1/Pods-todayExtension1-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -8,6 +8,8 @@ target 'todayExtension1' do
   # Pods for todayExtension1
 
 pod 'KeychainSwift', '~> 8.0'
+pod 'Firebase/Core'
+pod 'Firebase/Messaging'
 end
 
 target 'todayWidget1' do

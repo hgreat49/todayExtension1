@@ -1,0 +1,6 @@
+framework module Pods_todayExtension1 {
+  umbrella header "Pods-todayExtension1-umbrella.h"
+
+  export *
+  module * { export * }
+}
